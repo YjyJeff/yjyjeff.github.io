@@ -86,7 +86,7 @@
 <meta property="og:site_name" content="Yjy&#39;s Bullshit">
 <meta property="og:description" content="什么是GBDT我看到的各种教程都是直接介绍GBDT是boosting的一种，多个函数的组合，每个函数学习残差最后得到最优的函数，balabala推导就开始了，最后一遍一遍读懂了每一步推导，对GBDT还是似懂非懂。直到我看了如下资料，我才明白原来GBDT的核心就是梯度下降。gbdt中每一轮学习到的新函数，就是在优化$loss(y, \hat y)$损失函数中的一步优化过程，整个gbdt新函数相加过程">
 <meta property="article:published_time" content="2020-02-05T04:02:24.000Z">
-<meta property="article:modified_time" content="2020-02-05T09:47:50.771Z">
+<meta property="article:modified_time" content="2020-02-05T10:01:01.296Z">
 <meta property="article:author" content="JunyuYang">
 <meta name="twitter:card" content="summary">
 
@@ -304,7 +304,7 @@
 <li>随便取一个$\hat y$</li>
 <li>求 $loss(y, \hat y)$相对于 $\hat y$ 的导数 $ g $</li>
 <li>$\hat y = \hat y - \lambda g$, 其中$\lambda$是步长,那么新的$\hat y$带入损失函数中，会比之前的更小</li>
-<li>重复上述过程，直到特定步数或者损失函数值不再下降</li>
+<li>重复2-3过程，直到特定步数或者损失函数值不再下降</li>
 </ol>
 <p>总结下来就是最优的$\hat y = y_0 - g_0 - g_1 - … - g_n$。上述过程适用于参数空间，就是说$\hat y$是一个参数。现在让我们抽象，我们让$\hat y = F(x)$，从概率论的角度来说$\hat y$是一个随机变量，由另一个随机变量$x$经过函数$F(x)$转化得到。我们继续套上面的公式，最优的$F(x) = F_0(x) - g_0 - g_1 - … - g_n$。到了这里，我们回过头来看大部分介绍gbdt的文章在一开头就说的gbdt形式：$F(x) = \sum_{t=0}^T f_t(x)$，其中$f_t(x)$是每一轮要学习的函数，我们看到两个是一毛一样的(除非你认为加减是不同的运算)。那么我们可以得出如下两个结论：</p>
 <ol>
