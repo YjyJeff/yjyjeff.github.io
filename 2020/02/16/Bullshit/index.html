@@ -86,7 +86,7 @@
 <meta property="og:site_name" content="Yjy&#39;s Bullshit">
 <meta property="og:description" content="Some bullshit about this blog">
 <meta property="article:published_time" content="2020-02-16T09:40:52.000Z">
-<meta property="article:modified_time" content="2020-02-16T10:34:42.004Z">
+<meta property="article:modified_time" content="2020-02-17T02:48:37.543Z">
 <meta property="article:author" content="JunyuYang">
 <meta name="twitter:card" content="summary">
 
@@ -315,14 +315,14 @@
         <h1 id="Bullshit"><a href="#Bullshit" class="headerlink" title="Bullshit"></a>Bullshit</h1><p>欢迎来到我的瞎扯淡空间，我在这里记录我学了又忘的东西，希望用我自己的理解把一些原理讲的谁都能懂。这个页面主要用于介绍我认为值得推荐的学习资源和一些总结</p>
 <h1 id="习惯"><a href="#习惯" class="headerlink" title="习惯"></a>习惯</h1><ul>
 <li>一定要知道基本概念的详细定义, 例如：LOTP, Baye’s rule里面每个component代表什么含义，哪个是先验，哪个是似然函数？随机变量本质是个函数！</li>
-<li>简历基本概念之间的联系。例如求根法和优化目标函数之间</li>
+<li>理解基本概念之间的联系。例如求根法和优化目标函数之间</li>
 <li>从抽象到具象，例如优化目标函数是个抽象概念，如何优化：SGD, 牛顿法才是具体的优化方法。EM是个抽象的用于优化带隐变量的优化方法，具体的函数定义依赖于实际问题。gbdt也是抽象方法，xgboost只是gbdt的一种实现而已</li>
 <li>尝试从不同角度来解释同一件事情，和联系算几分相似吧</li>
 <li>Recap: 晚上recap今天的事，一个星期recap一次整个星期的事</li>
 </ul>
 <h1 id="ML"><a href="#ML" class="headerlink" title="ML"></a>ML</h1><h2 id="Books"><a href="#Books" class="headerlink" title="Books"></a>Books</h2><p><a href="https://drive.google.com/file/d/1VmkAAGOYCTORq1wxSQqy255qLJjTNvBI/view" target="_blank" rel="noopener">概率论</a><br><a href="http://immersivemath.com/ila/index.html" target="_blank" rel="noopener">线代</a></p>
 <h2 id="Methods"><a href="#Methods" class="headerlink" title="Methods"></a>Methods</h2><p><a href="http://www.keithschwarz.com/darts-dice-coins/" target="_blank" rel="noopener">Alias Sampling</a>:超牛逼的网页，详细介绍了如何使用O(1)的时间生成PMF，跪着读完。<br><a href="https://yjyjeff.github.io/2020/02/05/gbdt/" target="_blank" rel="noopener">gbdt</a>:指向我自己的gbdt，里面有我认为很好的reference</p>
-<h1 id="OS"><a href="#OS" class="headerlink" title="OS"></a>OS</h1><p><a href="https://cilium.readthedocs.io/en/stable/bpf/#bpf-guide" target="_blank" rel="noopener">ebpf</a>：在内核中运行，基于内核态虚拟机，事件出发，我们用它做系统监控，大大减少系统监控的消耗和提高系统监控的准确性<br><a href="http://gen.lib.rus.ec/book/index.php?md5=7312960D0FB110104EA01347F30CC98A" target="_blank" rel="noopener">OSC</a>：一本介绍OS的书<br><a href="https://www.ardanlabs.com/blog/2018/08/scheduling-in-go-part2.html" target="_blank" rel="noopener">Golang Runtime</a>：GPM模型，如何做到用户级线程。其实，传说中的coroutine就是混合模型里的用户级线程啊。</p>
+<h1 id="OS"><a href="#OS" class="headerlink" title="OS"></a>OS</h1><p><a href="https://cilium.readthedocs.io/en/stable/bpf/#bpf-guide" target="_blank" rel="noopener">ebpf</a>：在内核中运行，基于内核态虚拟机，事件触发，我们用它做系统监控，大大减少系统监控的消耗(内核态过滤)和提高系统监控的准确性(内核中实时提取数据，而不是在事后做snapshot，osquery，/proc/pid/*都属于snapshot)<br><a href="http://gen.lib.rus.ec/book/index.php?md5=7312960D0FB110104EA01347F30CC98A" target="_blank" rel="noopener">OSC</a>：一本介绍OS的书<br><a href="https://www.ardanlabs.com/blog/2018/08/scheduling-in-go-part2.html" target="_blank" rel="noopener">Golang Runtime</a>：GPM模型，如何做到用户级线程。其实，传说中的coroutine就是混合模型里的用户级线程啊。</p>
 
       
     </div>
